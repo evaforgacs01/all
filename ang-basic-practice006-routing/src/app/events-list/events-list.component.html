@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-8 offset-2">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let event of eventsList | async">
+                    <td>{{ event.event }}</td>
+                    <td>{{ event.date }}</td>
+                    <td>{{ event.time }}</td>
+                    <td>{{ event.address }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

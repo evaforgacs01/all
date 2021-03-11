@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../../src/scss/style.scss","../../src/scss/_mixins.scss","../../src/scss/_colors.scss"],"names":[],"mappings":"AAIA;EAEA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;EAEA;;ACGA;EACI,kBCvBM;;ADyBN;EACA,kBC1BM;;ADsBV;EACI,kBCrBM;;ADuBN;EACA,kBCxBM;;ADoBV;EACI,kBCnBK;;ADqBL;EACA,kBCtBK","file":"style.css"}

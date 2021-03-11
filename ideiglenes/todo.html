@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+
+<h3 class="body__day">Monday</h3>
+<h3 class="body__date">2020-12-12</h3>
+
+ <div class="main">
+    <h1>To Do List</h1>
+    <form action="todo.html" method="post">
+        
+        <input type="text" placeholder=" Take the garbage out" name="task">
+        <button type="submit"><strong>Add</strong></button>
+    </form>
+
+    <div class="tasksBoard">
+        <p class="counter">You have <span class="todo__number">0</span>pending items</p>
+        <ul>
+             <li><span class="delete"><input type="checkbox"><label>Modal</label></span></li>
+            <li><span class="delete"><input type="checkbox"><label for="">Calculator</label></span></li>
+            <li><span class="delete"><input type="checkbox"><label for="">Pairs</label></span></li>
+            <li><span class="delete"><input type="checkbox"><label for="">TodoList</label></span></li>
+        </ul>
+        
+        
+    </div> 
+    <div class="taskBoard__done"></div>
+
+</div>
+
+<footer>
+    <div class="todo__footer">
+        <button id="clear">Clear All</button> 
+        <button id="show">Show complete</button>
+    </div>
+</footer>
+
+
+    <script src="todo.js"></script>
+</body>
+</html>

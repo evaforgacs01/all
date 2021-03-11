@@ -1,0 +1,52 @@
+
+@debug ----Equality-----;
+@debug 1px == 1;
+@debug 1px == 1px;
+@debug 10px == 1cm;
+@debug 48px == 0.5in;
+@debug 0.9999999999999 == 1;
+@debug Arial == 'Arial';
+@debug Arial == "Arial";
+@debug 'Arial' != 'Arial';
+@debug true != false;
+@debug true != true;
+
+@debug ----relations-----;
+
+@debug 100 > 50;
+@debug 10px < 17px;
+@debug 96px >= 1in;
+@debug 10s < 10s;
+@debug 100s >= 50s;
+@debug ----math-----;
+@debug 10s + 5s;
+@debug 10s- 10s;
+@debug 10px + 2px;
+@debug (10px / 2px);
+
+
+@debug ----string-----;
+
+
+$postfix:"--10";
+.col#{$postfix}::before{
+  font: 16px/16px "Times" + "New Roman", Times, serif;
+  content: #{"track" + "list"} ;
+
+}
+
+@debug ----boolean-----;
+
+@debug not true;
+@debug true and false;
+@debug true or false;
+
+
+
+
+
+
+
+
+
+

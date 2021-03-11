@@ -1,0 +1,53 @@
+@use 'sass:list';
+
+// @function summarize-numbers($first:0, $second:0) {
+//     @if type-of($value: $first)!= number{
+//         @error "First number is not a number";
+//     }    
+//     @if type-of($value: $second)!= number{
+//         @error "Second number is not a number"
+//     }    
+//     @return $first + $second;
+// }
+
+// @debug summarize-numbers("sass", 20);
+
+
+
+@function summarize-numbers($numbers...) {
+    $sum: 0;
+    @for $i from 1 through list.length($numbers){
+        $value:list.nth($numbers, $i);
+        @if type-of($value) != number{
+                    @error "The" +$i "not a number"
+                }    
+        $sum: $sum + $value;
+    }
+    @return $sum;
+}
+
+// @debug summarize-numbers("sass", 1, 20, 3, 4);
+
+@function delete-list-element($list, $index) {
+    $new-list: ();
+    $length: list.length($list);
+
+    @if $index > $length {
+        @error "Element not exist";
+    }
+    @for $i from 1 through $length {
+       @if $i != $index  {
+        $new-list: list.append($new-list, list.nth($list, $i));
+       }
+    }
+    @return $new-list;
+}
+@debug delete-list-element(1,2,3,4, 2 );
+
+
+
+
+
+
+
+

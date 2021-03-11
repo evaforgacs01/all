@@ -1,0 +1,43 @@
+
+@use "sass:color";
+
+
+@mixin generate-colored-backgrounds($palette) {
+    @each $key, $value in $palette {
+    .background--#{$key}{
+    background-color: $value; 
+}
+}
+}
+
+
+
+@mixin generate-lighter-colored-backgrounds($palette, $lighter-percents) {
+    @each $key, $value in $palette {
+    //background--lighter-COLOR-percent    
+    //background--lighter-red-5   
+    
+    @each $percent in $lighter-percents {
+        .background--lighter-#{$key}-#{$percent} {
+    background-color:color.adjust($value, $lightness: $percent); 
+}
+    }
+    
+    
+}
+}
+@mixin generate-darker-colored-backgrounds($palette, $darker-percents) {
+    @each $key, $value in $palette {
+    //background--darker-COLOR-percent    
+    //background--darker-red-5   
+    
+    @each $percent in $darker-percents {
+        .background--darker-#{$key}-#{$percent} {
+    background-color:color.adjust($value, $lightness: -$percent); 
+}
+    }
+    
+    
+}
+}
+
